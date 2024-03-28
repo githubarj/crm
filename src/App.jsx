@@ -1,8 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import Authentication from "./Routes/Layouts/Authentication"
-import AuthForm from "./Routes/Pages/Authentication/AuthForm"
-import LogIn from "./Components/Forms/Auth/LogIn"
-import Register from "./Components/Forms/Auth/Register"
+import LogIn from "./Routes/Pages/Auth/LogIn"
+import Register from "./Routes/Pages/Auth/Register"
 
 
 const routes = createBrowserRouter([
@@ -10,10 +9,7 @@ const routes = createBrowserRouter([
     path : "/",
     element: <Authentication />,
     children: [
-      {
-        path: "/",
-        element: <AuthForm  />,
-        children: [
+      
           {
             index: true,
             element: <LogIn />
@@ -23,8 +19,6 @@ const routes = createBrowserRouter([
             element: <Register />
           }
         ]
-      }
-    ]
   }
 ])
 

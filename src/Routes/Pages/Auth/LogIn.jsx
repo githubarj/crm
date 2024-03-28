@@ -1,5 +1,6 @@
-import { Button, Checkbox, Form, Input , Row, Col} from 'antd';
-import useSwitchRoutes from '../../Hooks/useSwitchRoutes';
+import { Button, Checkbox, Form, Input} from 'antd';
+import useSwitchRoutes from '../../../Components/Hooks/useSwitchRoutes';
+import AuthFooter from '../../../Components/Footers/AuthFooter';
 function LogIn() {
   return (
     <Form name='log-in' autoComplete='off' layout= "vertical" >
@@ -28,26 +29,29 @@ function LogIn() {
       <Input  placeholder='password' />
     </Form.Item>
 
-    <Form.Item >
+    <Form.Item className='form-checkbox-forgot' >
         <Form.Item name="remember" valuePropName="checked" noStyle  >
           <Checkbox style={{marginLeft:"10px"}} >Remember me</Checkbox >
         </Form.Item>
 
-        <a className="login-form-forgot" href="">
+        <Button type="link" onClick={useSwitchRoutes("forgort password")}>
           Forgot password?
-        </a>
+        </Button>
       </Form.Item>
 
       <Form.Item  >
-        
         <Button type="primary" htmlType="submit" className="login-form-button" style={{width: "100%"}}   >
           Log in
         </Button>
-        
-        
       </Form.Item>
-
+      <Form.Item>
+        New to out platform ? <Button type='link'  onClick={useSwitchRoutes("register")} >Create an account</Button>
+      </Form.Item>
+      <Form.Item>
+      <AuthFooter />
+      </Form.Item>
     </Form>
+   
   )
 }
 

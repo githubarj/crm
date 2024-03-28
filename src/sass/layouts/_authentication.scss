@@ -10,5 +10,36 @@
     svg {
         position: absolute;
         bottom: 0;
+        z-index: 1;
     }
+
+    
+.auth-form {
+    z-index: 2;
+    background: $white;
+    width: fit-content;
+    padding: 20px 15px;
+    margin: auto;
+    border-radius: 5px;
+    @include flex-column;
+
+    &__title{
+        align-self: center;
+    }
+    &__paragraph{
+        margin-bottom: 10px;
+    }
+
+    .auth-footer-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        svg {
+            position: relative;
+        }
+
+    }
+
+}
+
 }
