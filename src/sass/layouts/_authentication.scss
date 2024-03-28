@@ -1,0 +1,14 @@
+
+@import "../base/mixin";
+.auth-container {
+    min-height: 100vh;
+    background: #F4F4FB;
+    @include flex-column;
+    justify-content: center;
+    position: relative;
+
+    svg {
+        position: absolute;
+        bottom: 0;
+    }
+}
