@@ -34,7 +34,7 @@ function LogIn() {
           <Checkbox style={{marginLeft:"10px"}} >Remember me</Checkbox >
         </Form.Item>
 
-        <Button type="link" onClick={useSwitchRoutes("forgort password")}>
+        <Button type="link" onClick={useSwitchRoutes("forgot")}>
           Forgot password?
         </Button>
       </Form.Item>
@@ -45,7 +45,7 @@ function LogIn() {
         </Button>
       </Form.Item>
       <Form.Item>
-        New to out platform ? <Button type='link'  onClick={useSwitchRoutes("register")} >Create an account</Button>
+        New to our platform ? <Button type='link'  onClick={useSwitchRoutes("register")} >Create an account</Button>
       </Form.Item>
       <Form.Item>
       <AuthFooter />

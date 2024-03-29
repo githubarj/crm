@@ -1,15 +1,20 @@
-import { Outlet } from "react-router-dom"
+import { Outlet, useLocation } from "react-router-dom"
 import { Typography } from "antd"
+import {headers} from "../Pages/Auth/authData"
 
 function Authentication() {
   const {Title , Text} = Typography
+
+  const location = useLocation()
+  const displayHeaderData = headers[location.pathname.substring(1) ]?? headers.login
+
   return (
     <section className="auth-container">
         <div className="auth-form" >
         <Title level={3} className="auth-form__title"  >Admin</Title>
         <div className="auth-form__paragraph">
-            <Title level={4}>Welcome to your BMS</Title>
-            <Text>Please Sign in to your account and start the adventure</Text>
+            <Title level={4}>{displayHeaderData.title}</Title>
+            <Text>{displayHeaderData.text}</Text>
         </div>
         <Outlet />
     </div>
