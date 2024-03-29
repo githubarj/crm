@@ -26,7 +26,7 @@ function LogIn() {
         },
       ]}
     >
-      <Input  placeholder='password' />
+      <Input.Password  placeholder='password' />
     </Form.Item>
 
     <Form.Item className='form-checkbox-forgot' >
