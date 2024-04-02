@@ -1,0 +1,36 @@
+.app-layout {
+    &__sider {
+        overflow: auto;
+        height: 100vh;
+        position: fixed !important;
+        left: 0;
+        top: 0;
+        bottom: 0;
+    }
+    &__layout {
+        margin-left: 200px;
+    }
+    &__header {
+        padding: 0;
+        background: $home-bg;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+    &__content {
+        margin: 24px 16px 0;
+        overflow: initial;
+        min-height: 100vh;
+
+    }
+    &__footer {
+        text-align: center;
+        position: sticky;
+        z-index: 1;
+        bottom: 0;
+        padding: 10px;
+         span {
+            color: red;
+        }
+    }
+}
