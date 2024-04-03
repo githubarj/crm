@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
 	AppstoreOutlined,
 	BarChartOutlined,
@@ -12,9 +12,8 @@ import {
 
 import { Layout, Menu } from "antd";
 
-const AppSider = () => {
+const AppSider = ({ collapsed, setCollapsed }) => {
 	const { Sider } = Layout;
-	const [collapsed, setCollapsed] = useState(false);
 	console.log(collapsed);
 
 	const items = [

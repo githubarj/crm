@@ -9,8 +9,8 @@
         bottom: 0;
     }
     &__layout {
-        margin-left: 200px;
         background: $home-bg;
+        transition: margin 0.2s normal ease;
     }
     &__header {
         padding: 0px 10px;
