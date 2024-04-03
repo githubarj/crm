@@ -1,5 +1,5 @@
-import { SearchOutlined } from "@ant-design/icons";
-import { Layout, Button, Row, Col } from "antd";
+import { SearchOutlined, UserOutlined } from "@ant-design/icons";
+import { Layout, Button, Row, Col, Badge, Avatar } from "antd";
 import { IoMoonOutline } from "react-icons/io5";
 const AppHeader = () => {
 	const { Header } = Layout;
@@ -9,10 +9,12 @@ const AppHeader = () => {
 				<Col>
 					<Button type="text" icon={<SearchOutlined />} />
 				</Col>
-				<Col>
-					<Button type="text" icon={<IoMoonOutline />} />
-					<Button type="text" icon={<SearchOutlined />} />
-					<Button type="text" icon={<SearchOutlined />} />
+				<Col className="header-btns">
+					<Button shape="circle" type="text" icon={<IoMoonOutline />} />
+					<Button shape="circle" type="text" icon={<SearchOutlined />} />
+					<Badge dot>
+						<Avatar shape="circle" icon={<UserOutlined />} />
+					</Badge>
 				</Col>
 			</Row>
 		</Header>

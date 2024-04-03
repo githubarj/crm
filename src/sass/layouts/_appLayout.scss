@@ -1,3 +1,4 @@
+@use "../base/mixin" as *;
 .app-layout {
     &__sider {
         overflow: auto;
@@ -11,17 +12,21 @@
         margin-left: 200px;
     }
     &__header {
-        padding: 0;
+        padding: 10px;
         background: $home-bg;
         position: sticky;
         top: 0;
         z-index: 1;
+
+        .header-btns {
+            @include flex-row-center;
+            gap: 15px;
+        }
     }
     &__content {
         margin: 24px 16px 0;
         overflow: initial;
         min-height: 100vh;
-
     }
     &__footer {
         text-align: center;
@@ -29,7 +34,7 @@
         z-index: 1;
         bottom: 0;
         padding: 10px;
-         span {
+        span {
             color: red;
         }
     }
