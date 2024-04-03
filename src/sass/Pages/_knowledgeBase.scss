@@ -1,0 +1,23 @@
+.knowledge-base {
+    &__header {
+        overflow: hidden;
+        position: relative;
+        padding: 50px 10px 70px 10px;
+        border-radius: 5px;
+        background: $kb-header;
+
+        > svg {
+            position: absolute;
+            bottom: -35px;
+        }
+        .header-text {
+            z-index: 1;
+        }
+
+        .header-input {
+            z-index: 1;
+            padding: 10px;
+            max-width: 425px;
+        }
+    }
+}
