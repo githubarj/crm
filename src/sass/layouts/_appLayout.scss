@@ -1,5 +1,8 @@
 @use "../base/mixin" as *;
 .app-layout {
+    min-height: 100vh;
+    overflow: scroll;
+
     &__sider {
         overflow: auto;
         height: 100vh;
@@ -7,8 +10,19 @@
         left: 0;
         top: 0;
         bottom: 0;
+        background: $home-bg !important;
+        .trigger-button {
+            font-size: "16px";
+            width: 100%;
+            height: auto;
+        }
+        .__menu {
+            background: $home-bg !important;
+            border: none !important;
+        }
     }
     &__layout {
+        width: 100% !important;
         background: $home-bg;
         transition: margin 0.2s normal ease;
     }
@@ -27,7 +41,6 @@
     &__content {
         margin: 24px 16px 0;
         overflow: initial;
-        min-height: 100vh;
     }
     &__footer {
         text-align: center;

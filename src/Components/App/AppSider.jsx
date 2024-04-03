@@ -3,6 +3,8 @@ import {
 	AppstoreOutlined,
 	BarChartOutlined,
 	CloudOutlined,
+	MenuFoldOutlined,
+	MenuUnfoldOutlined,
 	ShopOutlined,
 	TeamOutlined,
 	UploadOutlined,
@@ -10,7 +12,7 @@ import {
 	VideoCameraOutlined,
 } from "@ant-design/icons";
 
-import { Layout, Menu } from "antd";
+import { Button, Layout, Menu } from "antd";
 
 const AppSider = ({ collapsed, setCollapsed }) => {
 	const { Sider } = Layout;
@@ -30,18 +32,31 @@ const AppSider = ({ collapsed, setCollapsed }) => {
 		icon: React.createElement(icon),
 		label: `nav ${index + 1}`,
 	}));
+
 	return (
 		<Sider
 			className="app-layout__sider"
+			breakpoint="lg"
+			theme="light"
 			collapsible
 			collapsed={collapsed}
-			onCollapse={(value) => setCollapsed(value)}
+			trigger={null}
 		>
-			<div className="demo-logo-vertical" />
+			<Button
+				type="text"
+				icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+				onClick={() => setCollapsed(!collapsed)}
+				className="trigger-button"
+				style={{
+					fontSize: "16px",
+					width: "100%",
+					height: 64,
+				}}
+			/>
 			<Menu
-				theme="dark"
+				className="__menu"
 				mode="inline"
-				defaultSelectedKeys={["4"]}
+				defaultSelectedKeys={["1"]}
 				items={items}
 			/>
 		</Sider>
