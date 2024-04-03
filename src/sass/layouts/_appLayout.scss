@@ -10,9 +10,10 @@
     }
     &__layout {
         margin-left: 200px;
+        background: $home-bg;
     }
     &__header {
-        padding: 10px;
+        padding: 0px 10px;
         background: $home-bg;
         position: sticky;
         top: 0;
@@ -33,9 +34,12 @@
         position: sticky;
         z-index: 1;
         bottom: 0;
-        padding: 10px;
-        .footer-heart{
-            color: red;
+        padding: 10px 10px 0px 10px;
+        .footer-text {
+            @include flex-row-center;
+            > span {
+                color: red;
+            }
         }
     }
 }

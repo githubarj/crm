@@ -5,9 +5,9 @@ const AppFooter = () => {
 	return (
 		<Footer className="app-layout__footer">
 			<Row type="flex" justify="space-between">
-				<Col>
-					©{new Date().getFullYear()} Made with{" "}
-					<span className="footer-heart">&hearts;</span> by Githuba R J
+				<Col className="footer-text">
+					©{new Date().getFullYear()} Made with
+					<span>&hearts;</span> by Githuba R J
 				</Col>
 				<Col>
 					<Space size="small">
