@@ -16,7 +16,6 @@ import { Button, Layout, Menu } from "antd";
 
 const AppSider = ({ collapsed, setCollapsed }) => {
 	const { Sider } = Layout;
-	console.log(collapsed);
 
 	const items = [
 		UserOutlined,
