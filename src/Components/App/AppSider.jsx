@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
 	AppstoreOutlined,
 	BarChartOutlined,
@@ -14,6 +14,8 @@ import { Layout, Menu } from "antd";
 
 const AppSider = () => {
 	const { Sider } = Layout;
+	const [collapsed, setCollapsed] = useState(false);
+	console.log(collapsed);
 
 	const items = [
 		UserOutlined,
@@ -30,7 +32,12 @@ const AppSider = () => {
 		label: `nav ${index + 1}`,
 	}));
 	return (
-		<Sider className="app-layout__sider">
+		<Sider
+			className="app-layout__sider"
+			collapsible
+			collapsed={collapsed}
+			onCollapse={(value) => setCollapsed(value)}
+		>
 			<div className="demo-logo-vertical" />
 			<Menu
 				theme="dark"

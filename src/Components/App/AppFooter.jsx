@@ -6,8 +6,8 @@ const AppFooter = () => {
 		<Footer className="app-layout__footer">
 			<Row type="flex" justify="space-between">
 				<Col className="footer-text">
-					©{new Date().getFullYear()} Made with
-					<span>&hearts;</span> by Githuba R J
+					©{new Date().getFullYear()} Made with &nbsp;
+					<span> &hearts; </span> &nbsp;by Githuba R J
 				</Col>
 				<Col>
 					<Space size="small">
