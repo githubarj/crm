@@ -3,10 +3,9 @@ import { Col, List } from "antd";
 import { CiSettings, CiUnlock, CiCircleInfo, CiMobile3 } from "react-icons/ci";
 import { IoLinkOutline } from "react-icons/io5";
 import { PiCurrencyDollarThin } from "react-icons/pi";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const CategoryCard = ({ index, data }) => {
-	console.log(index);
-
 	const icons = [
 		CiSettings,
 		IoLinkOutline,
@@ -15,11 +14,17 @@ const CategoryCard = ({ index, data }) => {
 		CiMobile3,
 		CiCircleInfo,
 	];
+	const navigate = useNavigate();
+	const location = useLocation();
 
-	console.log(icons[index].icon);
+	function navigateToQuestion(index, key) {
+		return navigate(`/home/related-questions?card=${index}&question=${key}`, {
+			replace: location.pathname.includes("related-questions"),
+		});
+	}
 
 	return (
-		<Col span={8}>
+		<Col span={8} type="flex">
 			<List
 				className="card-container"
 				split={false}
@@ -32,8 +37,11 @@ const CategoryCard = ({ index, data }) => {
 				}
 				bordered
 				dataSource={data.options}
-				renderItem={(item) => (
-					<List.Item className="card-item" >
+				renderItem={(item, key) => (
+					<List.Item
+						className="card-item"
+						onClick={() => navigateToQuestion(index, key)}
+					>
 						<span>&#x25EF;&nbsp; </span>
 						{item}
 					</List.Item>

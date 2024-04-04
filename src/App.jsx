@@ -6,34 +6,49 @@ import ForgotPassword from "./Routes/Pages/Auth/ForgotPassword";
 import ResetPassword from "./Routes/Pages/Auth/ResetPassword";
 import AppLayout from "./Routes/Layouts/AppLayout";
 import KnowledgeBase from "./Routes/Pages/Home/KnowledgeBase";
+import RelatedQuestions from "./Routes/Pages/Home/RelatedQuestions";
 
 const routes = createBrowserRouter([
 	{
 		path: "/",
-		element: <Authentication />,
 		children: [
 			{
-				index: true,
-				element: <LogIn />,
+				path: "/",
+				element: <Authentication />,
+				children: [
+					{
+						index: true,
+						element: <LogIn />,
+					},
+					{
+						path: "register",
+						element: <Register />,
+					},
+					{
+						path: "forgot",
+						element: <ForgotPassword />,
+					},
+					{
+						path: "reset",
+						element: <ResetPassword />,
+					},
+				],
 			},
 			{
-				path: "register",
-				element: <Register />,
-			},
-			{
-				path: "forgot",
-				element: <ForgotPassword />,
-			},
-			{
-				path: "reset",
-				element: <ResetPassword />,
+				path: "home",
+				element: <AppLayout />,
+				children: [
+					{
+						index: true,
+						element: <KnowledgeBase />,
+					},
+					{
+						path: "related-questions",
+						element: <RelatedQuestions />,
+					},
+				],
 			},
 		],
-	},
-	{
-		path: "/home",
-		element: <AppLayout />,
-		children: [{ index: true, element: <KnowledgeBase /> }],
 	},
 ]);
 

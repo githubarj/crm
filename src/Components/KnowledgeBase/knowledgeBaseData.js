@@ -7,7 +7,7 @@ export const knowledgeBaseCategories = [
 			"Can I change my username",
 			"Where can I upload my avatar",
 			"How do I change my Timezone",
-			"How do I chnage my password ",
+			"How do I change my password ",
 		],
 	},
 	{

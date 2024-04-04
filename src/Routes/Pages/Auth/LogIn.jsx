@@ -49,7 +49,7 @@ function LogIn() {
 				</Button>
 			</Form.Item>
 			<Form.Item>
-				New to our platform ?{" "}
+				New to our platform ?
 				<Button type="link" onClick={useSwitchRoutes("register")}>
 					Create an account
 				</Button>

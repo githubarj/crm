@@ -27,7 +27,7 @@ function KnowledgeBase() {
 					></path>
 				</svg>
 			</Flex>
-			<Row gutter={[16, 18]} className="knowledge-base__content" >
+			<Row gutter={[16, 18]} className="knowledge-base__content"  >
 				{knowledgeBaseCategories.map((item, index) => (
 					<CategoryCard key={index} data={item} index ={index} />
 				))}
