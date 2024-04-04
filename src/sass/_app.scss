@@ -1,7 +1,12 @@
-
-
 //colors
-$white : #ffffff;
-$home-bg: #F4F5FA;
-$kb-header: #DCE2F4;
-$kb-header-alt: #E4E8F6;
+$white: #ffffff;
+$home-bg: #f4f5fa;
+$kb-header: #dce2f4;
+$kb-header-alt: #e4e8f6;
+
+/* Hide the scrollbar while still allowing scrolling */
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+}

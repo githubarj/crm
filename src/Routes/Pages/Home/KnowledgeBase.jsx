@@ -1,12 +1,14 @@
 import { SearchOutlined } from "@ant-design/icons";
 import { Flex, Input, Row, Typography } from "antd";
+import { knowledgeBaseCategories } from "../../../Components/KnowledgeBase/knowledgeBaseData";
+import CategoryCard from "../../../Components/KnowledgeBase/CategoryCard";
 
 function KnowledgeBase() {
 	const { Title, Text } = Typography;
 	return (
 		<Flex vertical gap={10} className="knowledge-base">
 			<Flex vertical align="center" gap={10} className="knowledge-base__header">
-				<Flex vertical align="center" className="header-text" >
+				<Flex vertical align="center" className="header-text">
 					<Title level={3} style={{ color: "blue" }}>
 						Hello, how can we help ?
 					</Title>
@@ -25,7 +27,11 @@ function KnowledgeBase() {
 					></path>
 				</svg>
 			</Flex>
-			<Row></Row>
+			<Row gutter={[16, 18]} className="knowledge-base__content" >
+				{knowledgeBaseCategories.map((item, index) => (
+					<CategoryCard key={index} data={item} index ={index} />
+				))}
+			</Row>
 		</Flex>
 	);
 }
