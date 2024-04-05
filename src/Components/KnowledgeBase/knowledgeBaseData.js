@@ -45,7 +45,7 @@ export const knowledgeBaseCategories = [
 	},
 	{
 		color: "aqua",
-		title: "Account Settings",
+		title: "Mobile Apps",
 		options: [
 			"How do I download the android app",
 			"How to download our iPad app",

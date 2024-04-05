@@ -22,9 +22,14 @@ const CategoryCard = ({ index, data }) => {
 			replace: location.pathname.includes("related-questions"),
 		});
 	}
+	const responsive = {
+		lg: 8,
+		md: 12,
+		sm: 24,
+	};
 
 	return (
-		<Col span={8} type="flex">
+		<Col {...responsive} type="flex">
 			<List
 				className="card-container"
 				split={false}

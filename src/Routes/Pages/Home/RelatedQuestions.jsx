@@ -6,12 +6,11 @@ import { useSearchParams } from "react-router-dom";
 const RelatedQuestions = () => {
 	const [searchParams] = useSearchParams();
 	// Access query parameters using the get method
-	const key = searchParams.get("card");
-	const index = searchParams.get("question");
-	console.log(key, index);
+	const card = searchParams.get("card");
+	const question = searchParams.get("question");
 	return (
 		<Flex gap={10}>
-			<CategoryCard index={0} data={knowledgeBaseCategories[0]} />
+			<CategoryCard index={card} data={knowledgeBaseCategories[card]} />
 		</Flex>
 	);
 };
