@@ -11,6 +11,7 @@ const RelatedQuestions = () => {
 	return (
 		<Flex gap={10}>
 			<CategoryCard index={card} data={knowledgeBaseCategories[card]} />
+			{question}
 		</Flex>
 	);
 };
