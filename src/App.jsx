@@ -7,6 +7,7 @@ import ResetPassword from "./Routes/Pages/Auth/ResetPassword";
 import AppLayout from "./Routes/Layouts/AppLayout";
 import KnowledgeBase from "./Routes/Pages/Home/KnowledgeBase";
 import RelatedQuestions from "./Routes/Pages/Home/RelatedQuestions";
+import Pricing from "./Routes/Pages/Home/Pricing";
 
 const routes = createBrowserRouter([
 	{
@@ -45,6 +46,10 @@ const routes = createBrowserRouter([
 					{
 						path: "related-questions",
 						element: <RelatedQuestions />,
+					},
+					{
+						path: "pricing",
+						element: <Pricing />,
 					},
 				],
 			},
