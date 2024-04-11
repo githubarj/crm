@@ -1,6 +1,6 @@
 export const pricingData = [
 	{
-		icon: "/public/assets/pricing/undraw_server_cluster_jwwq.svg",
+		icon: "/assets/pricing/undraw_server_cluster_jwwq.svg",
 		title: "  Basic ",
 		description: "A simple start for everyone   ",
 		price: 0,
@@ -14,7 +14,7 @@ export const pricingData = [
 	},
 
 	{
-		icon: "/public/assets/pricing/data-settings-8.svg",
+		icon: "/assets/pricing/data-settings-8.svg",
 		title: " Standard  ",
 		description: "  For small to medium businesses ",
 		price: 49,
@@ -28,7 +28,7 @@ export const pricingData = [
 	},
 
 	{
-		icon: "/public/assets/pricing/data-center-2-66.svg",
+		icon: "/assets/pricing/data-center-2-66.svg",
 		title: " Enterprise  ",
 		description: " Solution for big organizations",
 		price: 99,

@@ -22,10 +22,10 @@ const PricingPlans = () => {
 					Annually
 				</Flex>
 			</div>
-			<Row gutter={[16]} className="pricing-plans__content">
+			<Row gutter={16} className="pricing-plans__content">
 				{pricingData.map((item, index) => (
 					<Col key={index} lg={8} sm={12} xs={24} className="card" >
-						<img src={item.icon} alt="" />
+						<img src={item.icon} alt=""  style={{width: "100%"}} />
 					</Col>
 				))}
 			</Row>

@@ -15,8 +15,9 @@
                 margin-bottom: 0;
             }
         }
-        &__content{
-            .card{
+        &__content {
+            padding: 0px 50px;
+            .card {
                 border-radius: 5px;
                 border: 1px solid $kb-header-alt;
                 width: 100%;
